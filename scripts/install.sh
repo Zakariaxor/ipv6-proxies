@@ -91,7 +91,8 @@ mkdir $WORKDIR && cd $_
 
 IP4=$(curl -4 -s icanhazip.com)
 IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
-IP6="2a02:27ab:0:2"
+echo "IPV6 subnet?"
+read IP6
 
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
